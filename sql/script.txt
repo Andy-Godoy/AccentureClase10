@@ -1,0 +1,1 @@
+CREATE TABLE `accclase10`.`tickets` ( `id` VARCHAR(36) NOT NULL , `patente` VARCHAR(9) NOT NULL , `tipoVechiculo` VARCHAR(30) NOT NULL , `velocidadMedida` INT NOT NULL , `importeMulta` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
