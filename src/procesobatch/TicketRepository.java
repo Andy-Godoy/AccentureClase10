@@ -2,6 +2,7 @@ package procesobatch;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 
 public class TicketRepository {
@@ -10,7 +11,7 @@ public class TicketRepository {
     public TicketRepository(Connection conn) {
         this.conn = conn;
     }    
-    public void grabar(Ticket t) throws SQLException {
+    public void grabar(Ticket t) throws SQLIntegrityConstraintViolationException, Exception {
         Statement stm = conn.createStatement();
         
         StringBuilder strSQL = new StringBuilder();
